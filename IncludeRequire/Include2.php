@@ -1,4 +1,4 @@
-<?php include("function4.php"); ?>
+<?php include("IncludeRequire/function4.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +8,9 @@
 </head>
 <body>
   <h1> Welcome we are Learning Include in </h1>
+
    <h3> <?php sayhello(); ?> </h3>
+
+    <p> <?php add(5,10); ?></p>
 </body>
 </html>
