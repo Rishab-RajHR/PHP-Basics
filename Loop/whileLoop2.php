@@ -11,7 +11,8 @@
 
     $i = 0;
 
-    while($i < 10)
+    // while(con = true) entry control loop
+    while($i < 10)  
     {
         echo $arex[$i]." ,";
         $i++;
