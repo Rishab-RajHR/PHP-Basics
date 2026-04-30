@@ -1,3 +1,9 @@
+<?php
+     if(isset($_SESSION["Uname"]))
+      echo "<h1> You are already Logged In </h1>";
+    exit();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
