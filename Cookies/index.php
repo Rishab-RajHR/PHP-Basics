@@ -7,11 +7,19 @@
 </head>
 <body>
 <?php
-$value = "AlexZen";
+
+$value = "AlexZen from Kerala"; // For modifying the cookie we call the cookie
 $exp = time() + 86400;
 setcookie("name",$value,$exp);
 
 echo $_COOKIE['name'];
+
+// For deleting the cookie
+
+$unsetcookie = time() - 86400;
+
+// setcookie("name","",$unsetcookie);
+
 ?>
 </body>
 </html>
