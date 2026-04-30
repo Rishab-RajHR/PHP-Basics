@@ -1,7 +1,10 @@
 <?php
+     session_start();
      if(isset($_SESSION["Uname"]))
+      {
       echo "<h1> You are already Logged In </h1>";
-    exit();
+     exit();
+      }
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +35,12 @@
 </body>
 </html>
  <?php
-      session_start();
-
+    
+     if(isset($_POST['submit']))
+    {
+        
       $_SESSION["Uname"] = $_POST['username'];
+
+      header('location:welcome.php');
+    }
  ?>
