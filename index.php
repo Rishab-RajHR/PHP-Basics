@@ -7,7 +7,7 @@
 </head>
 <body>
     <form method="post" >
-        <table>
+        <table align="center" style="margin-top:200px;">
             <tr>
                 <td> Username: </td>
                 <td> <input type="text" name="username" ></td>
@@ -17,10 +17,16 @@
                 <td> <input type="password" name="password" ></td>
             </tr>
             <tr>
-                <td colspan="2"> <input type="submit" ></td>
+                <td colspan="2" align="center"> <input type="submit" ></td>
                
             </tr>
         </table>
     </form>
+   
 </body>
 </html>
+ <?php
+      session_start();
+
+      $_SESSION["Uname"] = $_POST['username'];
+ ?>
