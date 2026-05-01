@@ -7,15 +7,13 @@
 </head>
 <body>
   <?php
-    $email_a = 'alex12@gmail.com';
-    $email_b = 'alex12@gmailcom';
+   $a = 'joe@example.org';
+   $b = 'bogus - at - example dot org';
 
-    if (filter_var($email_a, FILTER_VALIDATE_EMAIL)) {
-        echo "This ($email_a) email address is considered valid.";
-    }
-    if (filter_var($email_b, FILTER_VALIDATE_EMAIL)) {
-        echo "This ($email_b) email address is considered valid.";
-    }
+  $sanitized_a = filter_var($b, FILTER_SANITIZE_EMAIL);
+
+  echo $sanitized_a;
+
   ?>
 </body>
 </html>
