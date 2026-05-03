@@ -1,6 +1,6 @@
 <?php
    
-    $con = mysqli_connect('localhost','root',''.'insertdb');
+    $con = mysqli_connect('localhost','root','','insertdb');
 
     function showData() {
         
@@ -10,8 +10,11 @@
         $run = mysqli_query($con,$query);
         if($run == TRUE){
             
-            $data = mysqli_fetch_assoc($run);
+        while( $data = mysqli_fetch_assoc($run)) {
+            echo "<pre>";
             print_r($data);
+        }
+                  
         }
         else{
            echo "Error !";
@@ -23,6 +26,8 @@
         <title>Show Data</title>
     </head>
     <body>
+
+    <?php showData(); ?>
         
     </body>
 </html>
