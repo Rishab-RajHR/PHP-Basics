@@ -9,12 +9,22 @@
         $query = "SELECT * FROM `userdata`";
         $run = mysqli_query($con,$query);
         if($run == TRUE){
-            
+        ?>
+        <table border="1" width="80%" align="center">
+        <tr>
+            <td>Name</td><td>Email Id</td>
+        </tr>
+        <?php
         while( $data = mysqli_fetch_assoc($run)) {
-            echo "<pre>";
-            print_r($data);
+           
+            ?> 
+             <tr>
+                <td><?php echo $data['Name'];?></td><td><?php echo $data['Email'];?></td>
+             </tr>
+            
+            <?php
         }
-                  
+        ?> </table>   <?php   
         }
         else{
            echo "Error !";
