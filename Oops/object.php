@@ -29,6 +29,8 @@
 
     $purvik->getData("Alex","Tanjavur","9857897667");
     $purvik->showdata();
+    $ramesh->getData("Basil","Coimbatore","757897667");
+    $ramesh->showdata();
 ?>
 </body>
 </html>
