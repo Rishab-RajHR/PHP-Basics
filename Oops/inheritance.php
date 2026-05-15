@@ -29,6 +29,7 @@ $child1 = new Child();
 
 $child1->childfun();
 
+$child1->parentsfun();
 ?>
 </body>
 </html>
