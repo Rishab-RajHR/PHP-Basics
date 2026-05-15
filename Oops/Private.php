@@ -6,37 +6,42 @@
   <title>Access Modifier in PHP</title>
 </head>
 <body>
+
 <?php
-  class Food
-  {
-       private $Fname;
+class Food
+{
+    private $Fname;
 
-       public function getName($name)
-       {
-           $this->Fname=$name;
-       }
+    public function getName($name)
+    {
+        $this->Fname = $name;
+    }
 
-       function showData()
-       {
-           echo "Item is :".$this->Fname."<br>";       
-       }
-  }
-  class JunkFood extends Food
-  {
-       private $Jfname = "Sandwich";
+    public function showData()
+    {
+        echo "Item is : " . $this->Fname . "<br>";
+    }
+}
 
-       function passValue($Jfname)
-       {
-           $this->getName($this->$Jfname);
-       }
-  }
-  $f1 = new Food();
-  $f1->getName("Pizza");
-  $f1->showData();
+class JunkFood extends Food
+{
+    private $Jfname = "Sandwich";
 
-  $jf = new JunkFood();
-  $jf->passValue();
-  $jf->showData();
+    public function passValue()
+    {
+        $this->getName($this->Jfname);
+    }
+}
+
+$f1 = new Food();
+$f1->getName("Pizza");
+$f1->showData();
+
+$jf = new JunkFood();
+$jf->passValue();
+$jf->showData();
+
 ?>
+
 </body>
 </html>
