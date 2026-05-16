@@ -9,15 +9,24 @@
 <?php
    
 class Example{
-    
-    public function sayHello(){
-         
-       echo "Hello World";
-    }
-}
-$obj = new Example();
 
-$obj->sayHello();
+   private $name;
+    
+   public function __construct($value)
+   {
+       $this->name=$value;
+   }
+
+   public function ShowVal()
+   {
+      echo $this->name;
+   }
+  
+}
+$obj = new Example("Tovino");
+$obj->ShowVal();
+
+
 ?>
 </body>
 </html>
