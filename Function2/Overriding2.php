@@ -13,7 +13,7 @@ class Car
 {
     public function StartCar()
     {
-        echo "The Car is Started.";
+        echo "Car Started From Parent Class  <br>";
     }
     public function InvokeParentStart()
     {
@@ -25,7 +25,7 @@ class SportsCar extends Car
 {
     public function StartCar()
     {
-         echo "The SportsCar Started with self start";
+         echo "Car Started From Child Class <br>";
     }
     public function InvokeParent()
     {
