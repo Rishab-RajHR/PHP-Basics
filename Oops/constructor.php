@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Constructor in PHP</title>
+</head>
+<body>
+<?php
+   
+class Example{
+    
+    public function sayHello(){
+         
+       echo "Hello World";
+    }
+}
+$obj = new Example();
+
+$obj->sayHello();
+?>
+</body>
+</html>
